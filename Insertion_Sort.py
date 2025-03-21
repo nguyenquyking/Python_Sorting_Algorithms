@@ -1,4 +1,6 @@
-def insertion_sort(InputList):
+from typing import List
+
+def insertion_sort(InputList: List[int]) -> None:
     for i in range(1, len(InputList)):
         j = i-1
         nxt_element = InputList[i]
@@ -9,6 +11,6 @@ def insertion_sort(InputList):
             j=j-1
         InputList[j+1] = nxt_element
 # you can add list of any numbers
-list = [6,5,3,1,8,7,2,4]
+list: List[int] = [6,5,3,1,8,7,2,4]
 insertion_sort(list)
 print(list)

@@ -1,4 +1,6 @@
-def selection_sort(input_list):
+from typing import List
+
+def selection_sort(input_list: List[int]) -> None:
     
     for idx in range(len(input_list)):
 
@@ -11,6 +13,6 @@ def selection_sort(input_list):
         input_list[idx], input_list[min_idx] = input_list[min_idx], input_list[idx]
 
 # add any list of number here 
-l = [5,2,4,6,1,3]
+l: List[int] = [5,2,4,6,1,3]
 selection_sort(l)
 print(l)

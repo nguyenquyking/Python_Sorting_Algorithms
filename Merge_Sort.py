@@ -1,4 +1,5 @@
-def merge_sort(unsorted_list):
+from typing import List
+def merge_sort(unsorted_list: List[int])-> List[int]:
     if len(unsorted_list) <= 1:
         return unsorted_list
 # Find the middle point and divide the unsorted list
@@ -12,7 +13,7 @@ def merge_sort(unsorted_list):
 
 # Merge the sorted halves
 
-def merge(left_half,right_half):
+def merge(left_half: List[int],right_half: List[int]) -> List[int]:
 
     res = []
     while len(left_half) != 0 and len(right_half) != 0:
@@ -28,7 +29,7 @@ def merge(left_half,right_half):
         res = res + left_half
     return res
 # You can add any list of numbers here
-unsorted_list = [6,5,3,1,8,7,2,4]
+unsorted_list: List[int] = [6,5,3,1,8,7,2,4]
 
 print(merge_sort(unsorted_list))
 
